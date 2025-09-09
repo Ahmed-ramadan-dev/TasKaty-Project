@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: TasKaty
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/task_management?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: 12345678
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mahmoudsabbahamr445@gmail.com
+    password: rrct rseo elyq bqzz
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    debug: true
+
+  Messages:
+    basename: i18n/Messages
+
+server:
+  port: 8074
+
+token:
+  secret: U2VjdXJlU3Ryb25nU2VjcmV0S2V5Rm9ySlcgdGhhdCBpcyAzMgpieXRlcw==
+  access-time: 15m
+  refresh-time: 7d
